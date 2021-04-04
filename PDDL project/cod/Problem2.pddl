@@ -1,0 +1,8 @@
+(define (problem test2)
+(:domain breadMachine)
+(:objects a b )
+(:init (enoughWater)
+        (enoughButter)
+        )
+(:goal (and  (SimpleBread a) (sweetBread b)))
+)

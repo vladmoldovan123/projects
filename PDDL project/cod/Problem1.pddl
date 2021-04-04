@@ -1,0 +1,6 @@
+(define (problem test3)
+(:domain breadMachine)
+(:objects a)
+(:init (startButton) )
+(:goal (seedBread a))
+)
