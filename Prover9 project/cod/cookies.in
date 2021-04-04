@@ -1,0 +1,134 @@
+formulas(assumptions).
+
+differentFrom(a,b).
+differentFrom(a,c).
+differentFrom(a,d).
+differentFrom(a,e).
+differentFrom(b,c).
+differentFrom(b,d).
+differentFrom(b,e).
+differentFrom(c,d).
+differentFrom(c,e).
+differentFrom(d,e).
+differentFrom(x,y) ->  differentFrom(y,x).
+
+totheright(a,b).
+totheright(a,c).
+totheright(a,d).
+totheright(a,e).
+totheright(b,c).
+totheright(b,d).
+totheright(b,e).
+totheright(c,d).
+totheright(c,e).
+totheright(d,e).
+-totheright(a,a).
+-totheright(b,a).
+-totheright(b,b).
+-totheright(c,a).
+-totheright(c,b).
+-totheright(c,c).
+-totheright(d,a).
+-totheright(d,b).
+-totheright(d,c).
+-totheright(d,d).
+-totheright(e,a).
+-totheright(e,b).
+-totheright(e,c).
+-totheright(e,d).
+-totheright(e,e).
+
+
+nextto(a,b).
+nextto(b,a).
+nextto(b,c).
+nextto(c,b).
+nextto(c,d).
+nextto(d,c).
+nextto(d,e).
+nextto(e,d).
+-nextto(a,a).
+-nextto(a,c).
+-nextto(a,d).
+-nextto(a,e).
+-nextto(b,b).
+-nextto(b,d).
+-nextto(b,e).
+-nextto(c,a).
+-nextto(c,e).
+-nextto(c,c).
+-nextto(d,d).
+-nextto(d,a).
+-nextto(d,b).
+-nextto(e,e).
+-nextto(e,a).
+-nextto(e,b).
+-nextto(e,c).
+
+nextto(x,y)->nextto(y,x).
+
+holly(x) | cameron(x) | julieanne(x) | alex(x) | jackie(x).
+banana(x) | strawberry(x) | vanilla(x) | caramel(x) | chocolate(x).
+brass(x) | mini(x) | tall(x) | round(x) | square(x).
+arnotts(x) | paradise(x) | dickSmith(x) | coles(x) | noFrills(x).
+chocChip(x) | tinyTeddies(x) | ginger(x) | oreos(x) | 100sAnd1000s(x).
+lounge(x) | kitchen(x) | closet(x) | table(x) | bedroom(x).
+
+holly(x) & holly(y) -> -differentFrom(x,y).
+ cameron(x) & cameron(y) -> -differentFrom(x,y).
+ julieanne(x) & julieanne(y) -> -differentFrom(x,y).
+ alex(x) & alex(y) -> -differentFrom(x,y).
+ jackie(x) & jackie(y) -> -differentFrom(x,y).
+ banana(x) & banana(y) -> -differentFrom(x,y).
+ caramel(x) & caramel(y) -> -differentFrom(x,y).
+ chocolate(x) & chocolate(y) -> -differentFrom(x,y).
+ strawberry(x) & strawberry(y) -> -differentFrom(x,y).
+ vanilla(x) & vanilla(y) -> -differentFrom(x,y).
+ arnotts(x) & arnotts(y) -> -differentFrom(x,y).
+ coles(x) & coles(y) -> -differentFrom(x,y).
+ dickSmith(x) & dickSmith(y) -> -differentFrom(x,y).
+ noFrills(x) & noFrills(y) -> -differentFrom(x,y).
+ paradise(x) & paradise(y) -> -differentFrom(x,y).
+ chocChip(x) & chocChip(y) -> -differentFrom(x,y).
+ ginger(x) & ginger(y) -> -differentFrom(x,y).
+ oreos(x) & oreos(y) -> -differentFrom(x,y).
+ 100sAnd1000s(x) & 100sAnd1000s(y) -> -differentFrom(x,y).
+ tinyTeddies(x) & tinyTeddies(y) -> -differentFrom(x,y).
+ brass(x) & brass(y) -> -differentFrom(x,y).
+ mini(x) & mini(y) -> -differentFrom(x,y).
+ round(x) & round(y) -> -differentFrom(x,y).
+ tall(x) & tall(y) -> -differentFrom(x,y).
+ square(x) & square(y) -> -differentFrom(x,y).
+ bedroom(x) & bedroom(y) -> -differentFrom(x,y).
+ closet(x) & closet(y) -> -differentFrom(x,y).
+ kitchen(x) & kitchen(y) -> -differentFrom(x,y).
+ lounge(x) & lounge(y) -> -differentFrom(x,y).
+ table(x) & table(y) -> -differentFrom(x,y).
+
+jackie(x) & lounge(y) -> nextto(y,x).
+arnotts(x) <-> round(x).
+cameron(x) & table(y) -> nextto(y,x).
+oreos(x) <-> closet(x).
+julieanne(x) <-> paradise(x).
+banana(c).
+tall(c).
+vanilla(a).
+holly(e).
+bedroom(x) <-> strawberry(x).
+tall(x) & square(y) -> nextto(y,x).
+cameron(x) <-> caramel(x).
+dickSmith(x) & coles(y) -> nextto(y,x).
+noFrills(x) & round(y) -> nextto(y,x).
+100sAnd1000s(x) & brass(y) -> nextto(y,x).
+noFrills(d).
+noFrills(d) & round(x) -> nextto(x,d).
+chocChip(a).
+dickSmith(x) & paradise(y) -> nextto(y,x).
+brass(b).
+julieanne(x) & strawberry(y) -> totheright(y,x).
+chocolate(x) <-> table(x).
+paradise(x) <-> kitchen(x).
+tinyTeddies(x) & round(y) -> differentFrom(x,y).
+coles(x) <-> mini(x).
+
+end_of_list.
