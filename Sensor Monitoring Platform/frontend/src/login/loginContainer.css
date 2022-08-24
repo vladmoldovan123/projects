@@ -1,0 +1,21 @@
+.registerMessage {
+    margin-top: 10vh;
+}
+
+.loginContainer {
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    background: #91E0F2;
+    padding: 40px 55px 45px 55px;
+    transition: all .3s;
+    border-radius: 20px;
+}
+
+.submitButton{
+    position: absolute;
+    left: 37%;
+    bottom: 35px;
+}

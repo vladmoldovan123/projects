@@ -1,0 +1,22 @@
+.reactTable{
+    text-align: center !important;
+    width: 1200px !important;
+    margin:auto !important;
+    display:flex !important;
+    top:250px;
+}
+
+.logoutButton{
+    top:350px !important;
+    left: 850px !important;
+}
+
+.historyButton{
+    top:150px !important;
+    left:850px !important;
+}
+
+.backButton{
+    top:100px!important;
+    left:900px!important;
+}
